@@ -4,35 +4,58 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A hybrid video downloader that uses yt-dlp for YouTube and gallery-dl for Instagram/TikTok. Supports bulk downloads from URL lists.
+A self-contained hybrid video downloader targeting non-technical users. Downloads from YouTube, Instagram, TikTok, and Twitter/X. Uses yt-dlp for YouTube and gallery-dl for social media platforms.
 
-## Setup
+## Target Audience
 
-Requires uv package manager. Script is self-contained with PEP 723 metadata.
+Non-technical users who want to download videos but have no coding experience. Documentation is optimized for beginners - avoids Git, uses simple ZIP downloads, minimal terminal usage.
+
+## Setup for Development
+
+Requires uv package manager (install via `curl -LsSf https://astral.sh/uv/install.sh | sh`).
 
 ```bash
 chmod +x downloader_hybrid.py
 ```
 
-Instagram requires session cookie in `~/.config/gallery-dl/config.json`
+Instagram downloads require session cookie in `~/.config/gallery-dl/config.json`:
+```json
+{
+    "extractor": {
+        "instagram": {
+            "cookies": {
+                "sessionid": "USER_SESSION_ID_HERE"
+            }
+        }
+    }
+}
+```
+
+## Key Features
+
+- **Self-updating**: `--refresh` flag in shebang ensures latest scraper versions
+- **PEP 723 compliant**: Dependencies defined in script metadata
+- **Cross-platform support**: YouTube (always), Instagram (with cookies), TikTok, Twitter/X
+- **Beginner-friendly**: README optimized for non-technical users
 
 ## Usage
 
-Main self-updating hybrid downloader:
+Main tool:
 ```bash
 ./downloader_hybrid.py urls.txt
+./downloader_hybrid.py "https://youtube.com/watch?v=example"
 ```
 
-Legacy YouTube-only version:
-```bash
-python3 downloader.py urls.txt
-```
+## Repository State
 
-## Architecture
+- Git repository with clean history
+- Hosted at: https://github.com/gccODYS/link-downloader
+- README.md optimized for ZIP downloads (no Git instructions)
+- User documentation focuses on `/Users/your_username/Documents/link-downloader-main` path structure
 
-- `downloader_hybrid.py` - Self-contained PEP 723 script with uv --refresh for latest scrapers
-- `downloader.py` - Legacy YouTube-only using yt-dlp
-- Instagram authentication via gallery-dl config
-- Downloads saved to `downloads/` directory
-- Handles 40+ URLs efficiently with detailed success/failure reporting
-- Always uses latest scraper versions to stay ahead of anti-scraping measures
+## Important Notes
+
+- **Never mention Homebrew** in user docs (removed for simplicity)
+- **ZIP downloads only** for end users (creates `link-downloader-main` folder)
+- **Instagram cookies expire** every few weeks - users need to refresh
+- **Downloads folder** created automatically in script directory
