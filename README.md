@@ -32,27 +32,18 @@ Videos are saved in the `downloads/` folder (in the same directory as the script
 
 **New to this? No problem!** Follow these steps to get everything working on your Mac:
 
-### Step 1: Install Homebrew (Package Manager)
-Homebrew helps install software on Mac. If you don't have it:
+### Step 1: Install uv (Python Package Manager)
+This tool manages Python packages automatically:
 
 1. **Open Terminal** (Cmd+Space, type "Terminal", press Enter)
 2. **Copy and paste this command:**
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-3. **Press Enter** and follow the prompts (you may need to enter your password)
-4. **Wait for installation** to complete (can take several minutes)
+3. **Press Enter** and wait for installation
+4. **Restart Terminal** (close and open again)
 
-### Step 2: Install uv (Python Package Manager)
-This tool manages Python packages automatically:
-
-1. **In Terminal, type:**
-```bash
-brew install uv
-```
-2. **Press Enter** and wait for installation
-
-### Step 3: Download This Tool
+### Step 2: Download This Tool
 You have two options:
 
 **Option A: Download from GitHub (Easier)**
@@ -66,7 +57,7 @@ You have two options:
 git clone https://github.com/gccODYS/link-downloader.git
 ```
 
-### Step 4: Make the Script Executable
+### Step 3: Make the Script Executable
 1. **Open Terminal**
 2. **Navigate to where you downloaded the tool:**
 ```bash
@@ -82,7 +73,7 @@ cd ~/Desktop/link-downloader-main
 chmod +x downloader_hybrid.py
 ```
 
-### Step 5: Test It!
+### Step 4: Test It!
 Try downloading a YouTube video to make sure everything works:
 ```bash
 ./downloader_hybrid.py "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
