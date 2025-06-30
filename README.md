@@ -28,6 +28,70 @@ or for single URLs:
 ### Step 4: Find your videos
 Videos are saved in the `downloads/` folder (in the same directory as the script)
 
+## Setup (First-time Installation)
+
+**New to this? No problem!** Follow these steps to get everything working on your Mac:
+
+### Step 1: Install Homebrew (Package Manager)
+Homebrew helps install software on Mac. If you don't have it:
+
+1. **Open Terminal** (Cmd+Space, type "Terminal", press Enter)
+2. **Copy and paste this command:**
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+3. **Press Enter** and follow the prompts (you may need to enter your password)
+4. **Wait for installation** to complete (can take several minutes)
+
+### Step 2: Install uv (Python Package Manager)
+This tool manages Python packages automatically:
+
+1. **In Terminal, type:**
+```bash
+brew install uv
+```
+2. **Press Enter** and wait for installation
+
+### Step 3: Download This Tool
+You have two options:
+
+**Option A: Download from GitHub (Easier)**
+1. Go to: https://github.com/gccODYS/link-downloader
+2. Click the green **"Code"** button
+3. Click **"Download ZIP"**
+4. **Unzip the file** to your Desktop or Documents folder
+
+**Option B: Use Git (If you know how)**
+```bash
+git clone https://github.com/gccODYS/link-downloader.git
+```
+
+### Step 4: Make the Script Executable
+1. **Open Terminal**
+2. **Navigate to where you downloaded the tool:**
+```bash
+cd ~/Desktop/link-downloader-main
+```
+**Common path examples:**
+- If in Documents folder: `cd ~/Documents/link-downloader-main`
+- If in Downloads folder: `cd ~/Downloads/link-downloader-main`
+- If in a subfolder: `cd ~/Documents/MyProjects/link-downloader-main`
+
+3. **Make the script runnable:**
+```bash
+chmod +x downloader_hybrid.py
+```
+
+### Step 5: Test It!
+Try downloading a YouTube video to make sure everything works:
+```bash
+./downloader_hybrid.py "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+```
+
+If you see a video downloading, you're all set! 🎉
+
+---
+
 ## Instagram Setup (One-time only)
 
 If you want to download Instagram content, you need to get your session cookie:
