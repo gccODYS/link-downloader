@@ -10,9 +10,9 @@ Downloads videos from YouTube, Instagram, TikTok, and Twitter/X. Self-updating a
 
 ### Step 2: Open Terminal and navigate to the tool
 1. **Open Terminal** (on Mac: press Cmd+Space, type "Terminal", press Enter)
-2. **Navigate to this folder** by typing:
+2. **Navigate to where you downloaded the tool** by typing:
 ```bash
-cd "/Users/ogallagher27/Documents/2_Extracurriculars/Link_downloader"
+cd /Users/your_username/Documents/link-downloader-main
 ```
 3. **Press Enter** - you're now in the right place!
 
@@ -44,18 +44,10 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 4. **Restart Terminal** (close and open again)
 
 ### Step 2: Download This Tool
-You have two options:
-
-**Option A: Download from GitHub (Easier)**
 1. Go to: https://github.com/gccODYS/link-downloader
 2. Click the green **"Code"** button
 3. Click **"Download ZIP"**
 4. **Unzip the file** to your Desktop or Documents folder
-
-**Option B: Use Git (If you know how)**
-```bash
-git clone https://github.com/gccODYS/link-downloader.git
-```
 
 ### Step 3: Make the Script Executable
 1. **Open Terminal**
